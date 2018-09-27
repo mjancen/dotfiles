@@ -1,0 +1,28 @@
+:sp <file>          open file in horizontal split
+:vsp <file>         open file in vertical split
+Ctrl+W twice        switch between splits
+
+:tabe <file>        open file in new tab
+gt                  go to next tab
+Ctrl-PgDn           go to next tab
+gT                  go to previous tab
+Ctrl-PgUp           go to previous tab
+{i}gt               go to tab in position i
+
+f<char>             move cursor to char
+t<char>             move cursor to one before char
+
+
+
+############################################################
+NERDTREE
+############################################################
+Ctrl+N              toggle NERDTree (custom)
+m                   open NERDTree menu
+t                   open file in new tab
+i                   open file in horizontal split
+s                   open file in vertical split
+I                   toggle hidden files
+R                   refresh the tree
+?                   NERDTree help
+
