@@ -1,3 +1,6 @@
+colorscheme srcery
+
+
 " ##### VUNDLE CONFIG #####
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -49,7 +52,6 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-colorscheme srcery
 
 let mapleader = ","         " remaps leader key
 
@@ -83,7 +85,7 @@ set foldmethod=indent       " folds indented blocks
 
 
 " Insert timestamp shortcut
-nnoremap tt "=strftime("%Y-%m-%d, %a")<CR>P
+nnoremap tt "=strftime("%Y-%m-%d, %a, %H:%M:%S")<CR>P
 " inoremap tt <C-R>=strftime("%Y-%m-%d, %a")<CR>
 
 
