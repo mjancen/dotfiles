@@ -13,7 +13,6 @@ sudo apt-get -y --force-yes update
 sudo apt-get -y --force-yes upgrade
 
 # install apps
-snap install spotify
 apt-get install \
 	git curl gparted
 
@@ -29,3 +28,16 @@ apt-get install code # or code-insiders
 curl -O https://repo.continuum.io/miniconda/Miniconda3-4.5.12-Linux-x86-64.sh
 bash Miniconda3-4.5.12-Linux-x86-64.sh
 
+# Flatpak
+apt install flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# Zotero
+flatpak install -y flathub org.zotero.Zotero
+
+# Spotify
+flatpak install -y flathub com.spotify.Client
+
+
+echo "Post-installation process finished."
+echo "Time for a reboot!"
