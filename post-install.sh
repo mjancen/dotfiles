@@ -17,7 +17,7 @@ sudo apt-get -y --force-yes upgrade
 
 # install apps
 apt-get install \
-	git curl gparted vim yakuake
+	git curl gparted vim yakuake gcc
 
 # VS Code
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
