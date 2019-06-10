@@ -1,0 +1,5 @@
+[user]
+	email = maksimjancenko@gmail.com
+	name = Maksim Jancenko
+[alias]
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
