@@ -36,10 +36,12 @@ apt install flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # Zotero
-flatpak install -y flathub org.zotero.Zotero
+# flatpak install -y flathub org.zotero.Zotero
 
 # Spotify
 flatpak install -y flathub com.spotify.Client
+
+./create-config-links.sh
 
 
 #echo "Post-installation process finished."
