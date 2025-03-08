@@ -11,13 +11,17 @@ set +x
 
 # add repos
 
+echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+echo Setting up my common directories
+mkdir -p ~/repo
+
 # basic update
 sudo apt-get -y --force-yes update
 sudo apt-get -y --force-yes upgrade
 echo Updated and upgraded.
 
 # install apps
-for app in git curl gparted vim neovim yakuake gcc steam-installer; do
+for app in git curl gparted vim neovim yakuake gcc tmux steam-installer; do
 	echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	echo Installing $app
 	apt install $app
@@ -67,6 +71,13 @@ echo steam-installer installed. Run steam-installer to install Steam.
 echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 echo Installing Vivaldi
 curl -O https://downloads.vivaldi.com/stable/vivaldi-stable_7.1.3570.58-1_amd64.deb
+
+echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+echo Setting up Neovim config
+# Install Kickstart Nvim dependencies
+apt install -y git make unzip gcc ripgrep
+git clone git@github.com:mjancen/kickstart.nvim.git ~/repo/maksim-kickstart
+ln -s $HOME/repo/maksim-kickstart $HOME/.config/nvim
 
 echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ./create-config-links.sh
