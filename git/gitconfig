@@ -5,6 +5,7 @@
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	a = add --all
 	c = commit
+	co = checkout
 	d = diff
 	s = status
 [core]
